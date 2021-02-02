@@ -4,8 +4,9 @@
   "description": "a fun (in theory) node build",
   "main": "app.js",
   "scripts": {
-    "start-dev": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
-    "start": "nodemon app"
+    "start-dev": "nodemon app",
+    "start-ui": "browser-sync start --proxy 'localhost:5050' --files 'index.html' 'public'",
+    "start": "node app"
   },
   "keywords": [],
   "author": "kgh",
