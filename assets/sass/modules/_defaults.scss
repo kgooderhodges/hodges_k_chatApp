@@ -18,6 +18,19 @@ a {
     color: white;
     // text-decoration: none;
     cursor: pointer;
-
     margin: 1rem 0;
+}
+
+.new-message {
+    padding:10px;
+    background-color: blue;
+    color: white;
+    border-radius: 8px;
+    float: left;
+    clear: both;
+}
+
+.my-message {
+    background-color: green;
+    float: right;
 }
