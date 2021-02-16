@@ -8,8 +8,7 @@ export default {
         <h4>{{msg.message.name}} says:</h4>
         <p>{{msg.message.content}}</p>
     </article>
-    `
-    ,
+    `,
 
     data: function () {
         return {
