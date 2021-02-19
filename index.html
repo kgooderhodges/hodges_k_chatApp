@@ -11,24 +11,22 @@
     <div id="bg">
         <img src="images/plant_bg.png" alt="plant pattern wallpaper">
     </div>
-    <main>
+    <main id="app">
         <section class="login">
             <h1>Let's Talk About Plants Baby</h1>
             <h2>Add a username to join the chat</h2>
-            <form action="/chat">
+            <form @submit="setNickname" id='name' action="/chat">
                 <input class="textInput" type="text" placeholder="Enter a Username">
 
-                <a href="/chat" class="button">Join us!</a>
+                <button class="button" type="submit">Join us!</button>
+
             </form>
         </section>
-        <!-- <input type="submit" value="JOIN"> -->
 
-        <!-- temp hack to bypass login -->
-        <!-- <a href="/chat">to chat page</a> -->
     </main>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script defer src="scripts/main.js"></script>
+    <script src="scripts/main.js" defer type="module"  ></script>
 </body>
 </html>

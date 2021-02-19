@@ -29,6 +29,8 @@ import ChatMessage from "./components/TheMessageComponent.js"
 
         created: function() {
             console.log('its alive');
+            this.nickname = window.localStorage.getItem('name');
+            console.log(window.localStorage);
         },
 
         methods: {
@@ -37,6 +39,12 @@ import ChatMessage from "./components/TheMessageComponent.js"
                 socket.emit('chatmessage', {content: this.message, name: this.nickname || "Anonymous"});
 
                 this.message = "";
+            },
+
+            setNickname(setUser){
+                let name = setUser.target.elements[0].value;
+                window.localStorage.setItem('name', name);
+                window.location = '/chat';
             }
         },
 

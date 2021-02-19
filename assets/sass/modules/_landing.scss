@@ -13,8 +13,9 @@
     }
 
     .textInput {
+        display: block;
         margin-top: .5rem;
-        line-height: 2rem;
+        line-height: 2.5rem;
         width: 15rem;
         text-align: center;
         justify-content: center;
@@ -23,6 +24,7 @@
     }
 
     .button {
+        display: block;
         width: 15rem;
         background: yellow;
         color: black;

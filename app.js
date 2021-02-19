@@ -1,6 +1,5 @@
 const express = require('express');
 const path = require('path');
-
 const messenger = require('socket.io')();
 
 const app = express();
@@ -37,7 +36,9 @@ messenger.on('connection', (socket) =>  {
         messenger.emit('message', { id: socket.id, message: msg});
     });
 
+
     socket.on('disconnect', () => {
-        console.log('a user has disconnected');
+        console.log('a user has disconnected'); //(`${socket.username} has left the party.`);
+        messenger.emit
     })
 });

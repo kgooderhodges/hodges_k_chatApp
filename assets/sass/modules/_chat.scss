@@ -57,6 +57,7 @@
     #message-input {
         flex-grow: 1;
         // width: 40%;
+        resize: none;
         padding: 5px 15px;
         align-content: center;
         justify-content: center;
@@ -86,7 +87,6 @@ max-width: 70%;
 
 .my-message {
 background: linear-gradient(#1e9424 80%, #24af2b);
-// background-color: green;
 margin: 1rem .5rem;
 float: right;
 @include roundCorners(25px 25px 0 25px);
