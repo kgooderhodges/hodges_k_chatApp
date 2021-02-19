@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
 
-    <title>Bork App</title>
+    <title>Plant Talk</title>
 </head>
 <body>
+    <div id="bg">
+        <img src="images/plant_bg.png" alt="plant pattern wallpaper">
+    </div>
     <main>
-        <h1 class="hidden">Let's Talk About Plants Baby</h1>
-        <h4>Add a usern```ame to join the chat</h4>
-        <h6>or not, to stealth post</h6>
+        <section class="login">
+            <h1>Let's Talk About Plants Baby</h1>
+            <h2>Add a username to join the chat</h2>
+            <form action="/chat">
+                <input class="textInput" type="text" placeholder="Enter a Username">
 
-        <input type="text" placeholder="your handle">
-        <input type="password" placeholder="password">
-
-        <input type="submit" value="JOIN">
+                <a href="/chat" class="button">Join us!</a>
+            </form>
+        </section>
+        <!-- <input type="submit" value="JOIN"> -->
 
         <!-- temp hack to bypass login -->
-        <a href="/chat">to chat page</a>
+        <!-- <a href="/chat">to chat page</a> -->
     </main>
 
     <script src="/socket.io/socket.io.js"></script>
