@@ -8,19 +8,29 @@
     <title>My Chat Window</title>
 </head>
 <body>
+    <div id="bg">
+        <img src="images/plant_bg.png" alt="plant pattern wallpaper">
+    </div>
     <main id="app">
-        <h2>This is where some chat messages show up</h2>
 
-        <!-- !vue custom message component goes here -->
-        <section class="messages">
-            <ul id="messages" v-for="message in messages">
-                <newmessage :msg="message" :socketid="socketID"></newmessage>
-            </ul>
-        </section>
+        <section id="mainCon">
+            <h2>give me the dirt</h2>
 
-        <section class="message-wrapper">
-            <textarea v-model="message" class="text-message"></textarea>
-            <input @click.prevent="dispatchMessage" type="submit" value="send">
+            <!-- !vue custom message component goes here -->
+            <section id="message-container"> <!-- *Trevor had this as a section with class ="messages" -->
+                <ul id="messages" v-for="message in messages">
+                    <newmessage :msg="message" :socketid="socketID"></newmessage>
+                </ul>
+            </section>
+
+            <section id="send-container">
+                <textarea v-model="message" id="message-input" placeholder="Type Message Here"></textarea>
+                <button class="chat-btn" href="chat.html" @click.prevent="dispatchMessage" type="submit">Send</button>
+
+
+                <!--* This was Trevor's send button -->
+                <!-- <input class="chat-btn" @click.prevent="dispatchMessage" type="submit" value="send"> -->
+            </section>
         </section>
     </main>
 
