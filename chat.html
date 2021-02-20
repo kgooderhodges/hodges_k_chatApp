@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titan+One&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="css/main.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    <title>My Chat Window</title>
+    <title>Dishin' the Dirt</title>
 </head>
 <body>
     <div id="bg">
@@ -14,22 +17,18 @@
     <main id="app">
 
         <section id="mainCon">
-            <h2>give me the dirt</h2>
+            <h2>Where My Plants At</h2>
 
             <!-- !vue custom message component goes here -->
-            <section id="message-container"> 
+            <section id="messageCon"> 
                 <ul id="messages" v-for="message in messages">
                     <newmessage :msg="message" :socketid="socketID"></newmessage>
                 </ul>
             </section>
 
-            <form id="send-container">
-                <input v-model="message" id="message-input" placeholder="Type Message Here" type="text" />
+            <form id="sendMsg">
+                <input v-model="message" id="msginput" placeholder="Type Message Here" type="text" autocomplete="off"/>
                 <button :disabled="!message" class="chat-btn" href="chat.html"  @click.prevent="dispatchMessage" type="submit">Send</button>
-
-
-                <!--* This was Trevor's send button -->
-                <!-- <input class="chat-btn" @click.prevent="dispatchMessage" type="submit" value="send"> -->
             </form>
         </section>
     </main>

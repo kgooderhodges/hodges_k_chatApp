@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Titan+One&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/main.css">
 
     <title>Plant Talk</title>
@@ -13,10 +15,10 @@
     </div>
     <main id="app">
         <section class="login">
-            <h1>Let's Talk About Plants Baby</h1>
-            <h2>Add a username to join the chat</h2>
             <form @submit="setNickname" id='name' action="/chat">
-                <input class="textInput" type="text" placeholder="Enter a Username">
+                <h1>Let's Talk About Plants Baby</h1>
+                <h2>Add a username to join the chat</h2>
+                <input class="enterName" type="text" placeholder="Enter a Username" required>
 
                 <button class="button" type="submit">Join us!</button>
 
